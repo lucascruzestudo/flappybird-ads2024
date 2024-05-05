@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnObjects : MonoBehaviour
 {
     public float maxTime;
-    public GameObject prefab;
+    public List<GameObject> prefabs;
 
     public float maxHeight;
     public float minHeight;
@@ -27,6 +28,7 @@ public class SpawnObjects : MonoBehaviour
 
     private void InstantiateObject()
     {
+        var prefab = prefabs[Random.Range(0, prefabs.Count)];
         var instance = Instantiate(prefab);
         var y = Random.Range(minHeight, maxHeight);
         instance.transform.position = transform.position + new Vector3(0, y);
