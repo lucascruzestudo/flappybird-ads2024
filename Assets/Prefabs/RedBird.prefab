@@ -21,6 +21,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: 3d339e8ad819db441b5ffe0500489e5b, type: 2}
     - target: {fileID: 7378636917389242962, guid: c3120b337915fab45ae2894b6e964060, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378636917389242962, guid: c3120b337915fab45ae2894b6e964060, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -68,8 +72,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedBird
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2415339863420451787, guid: c3120b337915fab45ae2894b6e964060, type: 3}
+    - {fileID: 8495758352064942983, guid: c3120b337915fab45ae2894b6e964060, type: 3}
+    - {fileID: 1001584282836560905, guid: c3120b337915fab45ae2894b6e964060, type: 3}
+    - {fileID: -4299237428844418233, guid: c3120b337915fab45ae2894b6e964060, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9221837216230319021, guid: c3120b337915fab45ae2894b6e964060, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 750010922368914328}
   m_SourcePrefab: {fileID: 100100000, guid: c3120b337915fab45ae2894b6e964060, type: 3}
+--- !u!1 &882397774574616908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9221837216230319021, guid: c3120b337915fab45ae2894b6e964060, type: 3}
+  m_PrefabInstance: {fileID: 8341902427162616545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &750010922368914328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882397774574616908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156b0c2a65ccb3749bfa5469b032ef05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
