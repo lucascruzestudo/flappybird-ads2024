@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverView;
 
     private int _score;
+    private int _highScore;
+
+    public static GameManager Instance { get; private set; }
 
     public int Score
     {
@@ -17,6 +21,12 @@ public class GameManager : MonoBehaviour
             scoreView.text = value.ToString();
             _score = value;
         }
+    }
+
+    private void Awake()
+    {
+        _highScore = PlayerPrefs.GetInt("highScore", 0);
+
     }
 
     private void Start()
@@ -32,6 +42,14 @@ public class GameManager : MonoBehaviour
     public void GameIsOver()
     {
         gameOverView.SetActive(true);
+        if (_highScore < Score)
+        {
+            _highScore = Score;
+            PlayerPrefs.SetInt("highScore", _highScore);
+        }
+
+        gameOverView.GetComponentInChildren<Text>().text = "High Score: " + _highScore;
+
         Time.timeScale = 0;
     }
 }
