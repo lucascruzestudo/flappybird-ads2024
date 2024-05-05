@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundNight: {fileID: 6747958797757958107}
-  maxTime: 2.5
+  maxTime: 10
   isNight: 0
 --- !u!1 &8886627650346914001
 GameObject:
